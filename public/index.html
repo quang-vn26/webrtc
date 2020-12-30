@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Truyền hình trục tuyến bằng WebRTC</title>
+</head>
+
+<body>
+    <h1>Truyền hình trục tuyến bằng WebRTC</h1>
+
+    <div id="selectRoom">
+        <label for="name">Nhập tên của bạn</label>
+        <input id="name" type="text" />
+        <label for="roomNumber">Nhập số phòng</label>
+        <input id="roomNumber" type="text" />
+        <br><br>
+        <div></div>
+        <button id="joinBroadcaster">As broadcaster</button>
+        <button id="joinViewer">As Viewer</button>
+    </div>
+
+    <div id="consultingRoom" style="display:none">
+        <video autoplay></video>
+        <p id="broadcasterName"></p>
+        <ul id="viewers"></ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
